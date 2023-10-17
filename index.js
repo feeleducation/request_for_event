@@ -89,14 +89,14 @@ $(document).ready(function () {
     
     // プログラムのリストを読み込んで選択肢に入れる
     let opt = document.createElement("option");
-    const programList = programList();
+    const list = programList();
     
     let proItems = document.getElementsByClassName("programSelect");
     for (let i=0; i < proItems.length; i++) {
-        for (let j=0; j < programList.length; j++) {
+        for (let j=0; j < list.length; j++) {
             opt = document.createElement("option");
-            opt.value = programList[j];  //value値
-            opt.text = programList[j];   //テキスト値
+            opt.value = list[j];  //value値
+            opt.text = list[j];   //テキスト値
             proItems[i].appendChild(opt);
         }
     }
