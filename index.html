@@ -99,9 +99,6 @@
                         <input type="text" class="form-control" id="place-name" name="place-name" placeholder="○○公民館" aria-describedby="place-invalid" oninput="placeRequired(this, 'address');" required>
                     </div>
                 </div>
-                <div class="invalid-feedback" id="place-invalid">
-                    場所の名称、住所の少なくとも一方を入力してください。
-                </div>
                 <div class="row">
                     <div class="col-auto">
                         <label for="postal-code" class="form-label form-control-plaintext">郵便番号　</label>
@@ -121,11 +118,11 @@
                         <span class="p-country-name" style="display:none;">Japan</span>
                         <input type="text" class="p-region" id="prefecture" name="prefecture" style="display:none;">
                         <input type="text" class="p-locality p-street-address p-extended-address form-control"
-                            id="address" name="address" placeholder="○○市○○町1-2-3" aria-describedby="address-invalid" oninput="placeRequired(this, 'place-name');" required>
+                            id="address" name="address" placeholder="○○市○○町1-2-3" aria-describedby="place-invalid" oninput="placeRequired(this, 'place-name');" required>
+                        <div class="invalid-feedback" id="place-invalid">
+                            場所の名称、住所の少なくとも一方を入力してください。
+                        </div>
                     </div>
-                </div>
-                <div class="invalid-feedback" id="address-invalid">
-                    場所の名称、住所の少なくとも一方を入力してください。
                 </div>
                 <div id="place-help" class="form-text">
                     開催場所の手配は依頼者様にお願いしております。<br>場所が未定の場合は地域（町名まで）のみでも構いません。<br>場所の候補が複数箇所ある場合は備考欄に他の候補をご入力ください。</div>
