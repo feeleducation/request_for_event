@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>F.E.E.L.理科実験教室開催依頼フォーム</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #F7F7F7;
+        }
+
+        h2 {
+            padding: 0.25em 0.5em;
+            color: #494949;
+            background: transparent;
+            border-left: solid 5px #7db4e6;
+        }
+    </style>
+
+    <div class="m-2">
+        <h2 class="py-1">F.E.E.L.<br>理科実験教室開催依頼フォーム</h2>
+        <hr>
+        <p>
+            F.E.E.L.に興味をもっていただきありがとうございます。
+            F.E.E.L.に理科実験教室の開催を依頼される場合は、こちらのフォームに必要事項を入力し送信してください。<br>
+            フォームの各項目をできる限り入力していただけますと助かりますが、ご不明な点につきましては空欄で構いません。<br>
+            また、本フォームでなく、チャットで直接ご相談いただいても構いません<br>
+            <br>
+            開催依頼は、遅くとも開催希望日の1か月前までにお願いします（2か月以上前にご連絡いただけると助かります）。<br>
+            本フォームの送信後、担当者がLINEのチャットにて詳細（開催可否、講師料、準備物等）についてご連絡いたします。<br>
+            <br>
+            なお、理科実験教室の開催に関する詳細（開催可能な日程、理科実験プログラム一覧等）につきましては、
+            <a href="https://feeleducation.fc2.page/event/" target="_blank"
+                rel="noopener noreferrer">ホームページ</a>もご確認ください。<br>
+        </p>
+        <hr>
+        <form class="h-adr" novalidate>
+            <div class="mb-3">
+                <label for="organization" class="form-label">組織・団体名【必須】</label>
+                <input type="text" class="form-control" id="organization" name="organization"
+                    autocomplete="organization" placeholder="〇〇子ども会" aria-describedby="organization-invalid" required>
+                <div class="invalid-feedback" id="organization-invalid">
+                    組織・団体名を入力してください。
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">代表者様・担当者様氏名【必須】</label>
+                <input type="text" class="form-control" id="name" name="name" autocomplete="name" placeholder="九大　花子"
+                    aria-describedby="name-invalid" required>
+                <div class="invalid-feedback" id="name-invalid">
+                    代表者様・担当者様の氏名を入力してください。
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label" aria-describedby="date-help">ご希望の日程</label>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="date1" class="form-label form-control-plaintext">第1希望</label>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control dateInput" id="date1" name="date1" placeholder="日付を選択">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="date2" class="form-label form-control-plaintext">第2希望</label>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control dateInput" id="date2" name="date2" placeholder="日付を選択">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="date3" class="form-label form-control-plaintext">第3希望</label>
+                    </div>
+                    <div class="col">
+                        <input type="date" class="form-control dateInput" id="date3" name="date3" placeholder="日付を選択">
+                    </div>
+                </div>
+                <div id="date-help" class="form-text">
+                    開催依頼は、遅くとも開催希望日の1か月前までにお願いします（1か月後以降の日付しか入力できません）。<br>○月頃の希望というように具体的な日程の候補が決まっていない場合などは、この欄は空欄にして備考欄にその旨をご入力ください。
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="place" class="form-label" aria-describedby="place-help">希望の開催場所【名称・住所のいずれか必須】</label>
+                <div class="row mb-2">
+                    <div class="col-auto">
+                        <label for="place-name" class="form-label form-control-plaintext">場所の名称</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="place-name" name="place-name" placeholder="○○公民館" aria-describedby="place-invalid" oninput="placeRequired(this, 'address');" required>
+                    </div>
+                </div>
+                <div class="invalid-feedback" id="place-invalid">
+                    場所の名称、住所の少なくとも一方を入力してください。
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label for="postal-code" class="form-label form-control-plaintext">郵便番号　</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="p-postal-code form-control" id="postal-code" name="postal-code"
+                            inputmode="numeric" oninput="onPostalCode(this);" minlength="7" maxlength="8"
+                            placeholder="1234567" autocomplete="postal-code" aria-describedby="postal-code-help">
+                    </div>
+                </div>
+                <div id="postal-code-help" class="form-text">郵便番号を入力すると、住所の一部が自動入力されます。</div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="address" class="form-label form-control-plaintext">住所　　　</label>
+                    </div>
+                    <div class="col">
+                        <span class="p-country-name" style="display:none;">Japan</span>
+                        <input type="text" class="p-region" id="prefecture" name="prefecture" style="display:none;">
+                        <input type="text" class="p-locality p-street-address p-extended-address form-control"
+                            id="address" name="address" placeholder="○○市○○町1-2-3" aria-describedby="address-invalid" oninput="placeRequired(this, 'place-name');" required>
+                    </div>
+                </div>
+                <div class="invalid-feedback" id="address-invalid">
+                    場所の名称、住所の少なくとも一方を入力してください。
+                </div>
+                <div id="place-help" class="form-text">
+                    開催場所の手配は依頼者様にお願いしております。<br>場所が未定の場合は地域（町名まで）のみでも構いません。<br>場所の候補が複数箇所ある場合は備考欄に他の候補をご入力ください。</div>
+            </div>
+            <div class="mb-3">
+                <label for="number" class="form-label">参加予定者数【必須】</label>
+                <div class="col-auto">
+                    <input type="number" class="form-control" id="number" name="number" min="0" max="999" inputmode="numeric"
+                        oninput="convertZenkakuNumber('number')" aria-describedby="number-help number-invalid" required>
+                </div>
+                <div class="invalid-feedback" id="number-invalid">
+                    参加予定者数を数字で入力してください。
+                </div>
+                <div id="number-help" class="form-text">およその人数で構いません。</div>
+            </div>
+            <div class="mb-3">
+                <label for="program" class="form-label" aria-describedby="program-help">ご希望の理科実験プログラム</label>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="program1" class="form-label form-control-plaintext">第1希望</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select programSelect" id="program1" name="program1">
+                            <option selected value="">プログラムを選択</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="program2" class="form-label form-control-plaintext">第2希望</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select programSelect" id="program2" name="program2">
+                            <option selected value="">プログラムを選択</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-auto">
+                        <label for="program3" class="form-label form-control-plaintext">第3希望</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-select programSelect" id="program3" name="program3">
+                            <option selected value="">プログラムを選択</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="program-help" class="form-text">各プログラムの詳細は<a href="https://feeleducation.fc2.page/program/"
+                        target="_blank" rel="noopener noreferrer">ホームページ</a>をご確認ください。希望が無い場合は担当者から提案をさせていただきます。</div>
+            </div>
+            <div class="mb-3">
+                <label for="remarks" class="form-label">備考</label>
+                <textarea class="form-control" id="remarks" name="remarks" rows="3"
+                    aria-describedby="remarks-help"></textarea>
+                <div id="remarks-help" class="form-text">その他お伝えしたいこと、ご相談事項等がありましたらご入力ください。</div>
+            </div>
+            <button type="submit" class="btn btn-primary">送信する</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js" charset="utf-8"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
